@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diary Question</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Raleway', sans-serif; /* Changed font family to Raleway */
+    color: #000000; /* Changed text color to white */
+    text-align: center; /* Center-align all content */
+    margin: 0;
+    padding: 0 7px; /* Added padding for left and right sides */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('bg.jpg'); /* Set your custom image URL here */
+    background-size: cover;
+    background-position: center;
+  }
+  .container {
+    margin-top: 50px;
+  }
+  .button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+    width: 100px;
+    background-color: #a54c3e; /* Changed button background color to #B2AC88 */
+    color: #000000; /* Changed button text color to white */
+  }
+  .quote-container {
+    margin-top: 50px;
+  }
+  .quote {
+    font-family: 'Raleway', sans-serif; /* Changed font family to Raleway */
+    color: #000000; /* Changed quote text color to #D3D3D3 */
+    font-size: 20px; /* Reduced quote font size to 28px */
+    margin-top: 20px;
+    text-align: center; /* Center-align the quote text */
+  }
+  .refresh-message {
+    margin-top: 30px;
+    color: #000000;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Did you read the diary?</h2> </p>
+  <button class="button yes" onclick="askQuestion1()">Yes</button>
+  <button class="button no" onclick="showQuote1()">No</button>
+</div>
+
+<div class="quote-container" id="quote-container" style="display: none;">
+  <div id="quote">
+    <p class="quote">Hey Rudranshi, listen. I know life throws curveballs, and sometimes it feels like you're the only one at bat. But here's the thing: you don't have to swing alone.
+      Because honestly, you're more than just a best friend. You're the person I can tell anything to, the one who makes me laugh until my sides hurt, and the voice of reason that cuts through the mess when my own brain feels scrambled. You're the one I look forward to hanging out with, no matter what we do.
+      Here's to whatever weirdness life throws our way. You, me, shoulder to shoulder, ready to face it all. Together, we can celebrate the good times, pick each other up during the tough ones, and maybe even find some hilarious stories to tell later on. I'm always around to chat or answer your questions whenever you need. You know what!? you're like the moon, man 🌙 You light up the place, even when you're just chilling in the background. I hope now you realize you special this bond is for me, although we're friends since past 1.2 years only but feels like we've been together since ages!!! I don't know what is your reaction or thoughts after reading the diary, for you it's just another guy confessing to you but for me it's special and I don't even know why? See, Even if you part ways after this or distance yourself from me, I'm okay with that too, I don't have any issues with that, infact I'll be glad to have to a friend like you and i'll keep those little memories with me. You know what, you're just too good for someone. Trust me, the person to have you will be the luckiest out there. All I want to say is Thank you for everything you gave to me and to this bond and you know what, I'll never take any of this for granted and will always, alwayssss be grateful for this.THANK YOU SO MUCH 💞</p>
+  </div>
+</div>
+
+<script>
+  function askQuestion1() {
+    document.querySelector('.container').innerHTML = `
+      <h2>Did you really read the diary???</h2>
+      <button class="button yes" onclick="askQuestion2()">Yes</button>
+      <button class="button no" onclick="showQuote4()">No</button>
+    `;
+    var audio = document.getElementById("background-music");
+    audio.volume = 0.2; // Set the volume to 0.2 (2 out of 10)
+    audio.play();
+  }
+
+  function askQuestion2() {
+    document.querySelector('.container').innerHTML = `
+      <h2>OMG! I can't believe this, you read it fr?</h2> </p>
+      (next page contains something that you well and truly deserve💌) </p>
+      <button class="button yes" onclick="showQuote2()">Yes</button>
+      <button class="button no" onclick="showQuote3()">No</button>
+    `;
+  }
+
+  function showQuote1() {
+    document.querySelector('.container').innerHTML = `
+      <p class="quote">Arey!? I've been waiting for it since 3 months for you to read it.....ab toh padh le yaarrr :(</p>
+      <p class="refresh-message">(Refresh the page to restart and this time be honest)</p>
+    `;
+  }
+  
+
+  function showQuote2() {
+    document.querySelector('.container').innerHTML = `
+      <div class="quote-container" id="quote-container">
+        <div id="quote">
+          <p class="quote"> </p> "Hey Rudranshi!</p>
+           Listen. I know life throws curveballs, and sometimes it feels like you're the only one at bat. But here's the thing: you don't have to swing alone. </p>
+           Because honestly, you're more than just a best friend. You're the person I can tell anything to, the one who makes me laugh until my sides hurt, and the voice of reason that cuts through the mess when my own brain feels scrambled. You're the one I look forward to hanging out with, no matter what we do.</p>
+           Here's to whatever weirdness life throws our way. You, me, shoulder to shoulder, ready to face it all. Together, we can celebrate the good times, pick each other up during the tough ones, and maybe even find some hilarious stories to tell later on. I'm always around to chat or answer your questions whenever you need. You know what!? you're like the moon, man 🌙 You light up the place, even when you're just chilling in the background. </p>
+           I hope now you realize you special this bond is for me, although we're friends since past 1.2 years only but it feels like I've known you since ages!</p>
+           To be very honest, I don't know what is your reaction or thoughts after reading the diary, for you it's just another guy confessing to you but for me it's special and I don't even know why? See, Even if you part ways after this or distance yourself from me, I'm okay with that too, I don't have any issues with that, infact I'll be glad to have to a friend like you and i'll keep those little memories with me. </p> 
+           Although I never praise someone this much but you're just too good for someone. Trust me, the person to have you will be the luckiest out there. </p> 
+           All I want to say is Thank you for everything you gave to me and to this bond and you know what, I'll never take any of this for granted and will always, alwayssss be grateful for this. </p>
+           THANK YOU SO MUCH"🫶🏻🤍</p>
+       </div>
+      </div>
+    `;
+  }
+
+  function showQuote3() {
+    document.querySelector('.container').innerHTML = `
+      <p class="quote">....you disappointed me :(</p>
+      <p class="refresh-message">(Refresh the page to restart and this time be honest)</p>
+    `;
+    
+  }
+  function showQuote4() {
+    document.querySelector('.container').innerHTML = `
+      <p class="quote">Aur kitna wait karu mai :)</p>
+      <p class="refresh-message">(Refresh the page to restart and this time be honest)</p>
+    `;
+  }
+</script>
+</body>
+</html>
